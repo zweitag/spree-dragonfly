@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'spree', '1.0.3'
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~>0.9.12'
 

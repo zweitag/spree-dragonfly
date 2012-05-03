@@ -1,3 +1,5 @@
+require 'dragonfly'
+
 Spree::Image.class_eval do
   image_accessor :attachment do
     after_assign {|attachment| find_dimensions }

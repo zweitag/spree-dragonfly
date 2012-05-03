@@ -1,7 +1,9 @@
 # Configure Rails Environment
 ENV["RAILS_ENV"] = "test"
 
+require 'spree'
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
+require File.expand_path("#{File.dirname(__FILE__)}/../lib/spree_dragonfly.rb",  __FILE__)
 
 require 'rspec/rails'
 
