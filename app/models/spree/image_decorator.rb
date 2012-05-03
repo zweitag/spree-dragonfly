@@ -3,7 +3,7 @@ require 'dragonfly'
 Spree::Image.class_eval do
   image_accessor :attachment do
     after_assign {|attachment| find_dimensions }
-  end
+  end if respond_to?('image_accessor')
   validate :no_attachment_errors
 
   def find_dimensions
