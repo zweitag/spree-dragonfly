@@ -33,6 +33,15 @@ code
         create_file "config/initializers/dragonfly.rb", initializer_code
       end
 
+
+      desc "Copies the dragonfly image model to the app's app/models folder"
+
+      source_root File.expand_path('../../templates/', __FILE__)
+
+      def copy_dragonfly_image_model
+        copy_file 'dragonfly_image.rb', 'app/models/dragonfly_image.rb'
+      end
+
       def add_migrations
         run 'bundle exec rake railties:install:migrations FROM=spree_dragonfly'
       end
