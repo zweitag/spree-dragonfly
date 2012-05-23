@@ -12,18 +12,20 @@ app.configure_with(:rails)
 app.define_macro(ActiveRecord::Base, :image_accessor)
 
 # Spree image size defaults
+image_styles = ActiveSupport::JSON.decode Spree::Config[:attachment_styles]
+
 app.configure do |c|
   c.job :mini do
-    process :thumb, '48x48>'
+    process :thumb, image_styles["mini"]
   end
   c.job :small do
-    process :thumb, '100x100>'
+    process :thumb, image_styles["small"]
   end
   c.job :product do
-    process :thumb, '240x240>'
+    process :thumb, image_styles["product"]
   end
   c.job :large do
-    process :thumb, '600x600>'
+    process :thumb, image_styles["large"]
   end
 end
 code
