@@ -15,17 +15,11 @@ app.define_macro(ActiveRecord::Base, :image_accessor)
 image_styles = ActiveSupport::JSON.decode Spree::Config[:attachment_styles]
 
 app.configure do |c|
-  c.job :mini do
-    process :thumb, image_styles["mini"]
-  end
-  c.job :small do
-    process :thumb, image_styles["small"]
-  end
-  c.job :product do
-    process :thumb, image_styles["product"]
-  end
-  c.job :large do
-    process :thumb, image_styles["large"]
+  image_styles.each do |style_name, style_definition|
+    # By default the styles :mini, :small, :product and :large are included in the Spree config
+    c.job style_name do
+      process :thumb, style_definition
+    end
   end
 end
 code
