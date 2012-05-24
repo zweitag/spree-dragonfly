@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.description = 'Exchange paperclip with dragonfly for image processing in Spree.'
   s.required_ruby_version = '>= 1.8.7'
 
-  s.author            = 'Oliver Kiessler'
-  s.email             = 'kiessler@inceedo.com'
+  s.author            = 'Oliver Kiessler, Till Breuer'
+  s.email             = 'kiessler@inceedo.com, till.breuer@zweitag.de'
   s.homepage          = 'http://www.zweitag.de'
 
   s.files         = `git ls-files`.split("\n")
