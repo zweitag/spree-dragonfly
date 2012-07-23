@@ -1,5 +1,5 @@
 class DragonflyImage < Spree::Asset
-  attr_accessible :alt, :attachment, :position, :viewable_id
+  attr_accessible :alt, :attachment, :position, :viewable_id, :attachment_file_name, :attachment_updated_at
   image_accessor :attachment do
     after_assign {|attachment| find_dimensions }
   end
