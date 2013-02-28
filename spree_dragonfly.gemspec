@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_dragonfly'
-  s.version     = '1.0.0'
+  s.version     = '1.0.1'
   s.summary     = 'Spree Dragonfly Extension'
   s.description = 'Exchange paperclip with dragonfly for image processing in Spree.'
   s.required_ruby_version = '>= 1.8.7'
