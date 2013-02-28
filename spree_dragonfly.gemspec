@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'spree_core', '~> 1.1.0'
-  s.add_dependency 'dragonfly', '~> 0.9.12'
+  s.add_dependency 'dragonfly', '~> 0.9.14'
 
   s.add_development_dependency 'capybara', '1.0.1'
   s.add_development_dependency 'factory_girl'
