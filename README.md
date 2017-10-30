@@ -2,6 +2,10 @@
 
 Exchange paperclip with dragonfly for image processing in Spree.
 
+## Please note
+
+**This extension is not maintained anymore**
+
 ## Installation
 
 Add the spree_dragonfly gem to your bundler Gemfile:
